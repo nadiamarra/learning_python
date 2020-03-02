@@ -21,9 +21,10 @@ def calculate_average(list):
 
 
 def averages(list):
-    '''(list of list of number}->list of floats
+    '''(list of list of number}->list of float
 
-    Return the average of each inner list in a list. 
+    Return a new list in which each item is the average of the grades
+    in the inner list at the corresponding position of grades.
     
     >>>averages([[10,9,8],[2,4,3],[5,6,7]])
     [9.0,3.0,6.0]
