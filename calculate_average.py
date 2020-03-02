@@ -21,7 +21,7 @@ def calculate_average(list):
 
 
 def averages(list):
-    '''(list of list of number}->float
+    '''(list of list of number}->list of floats
 
     Return the average of each inner list in a list. 
     
