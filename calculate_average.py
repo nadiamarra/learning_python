@@ -17,5 +17,24 @@ def calculate_average(list):
         total+=item[1]
     return total/len(list)
     
+ 
+
+
+def averages(list):
+    '''(list of list of number}->float
+
+    Return the average of each inner list in a list. 
     
+    >>>averages([[10,9,8],[2,4,3],[5,6,7]])
+    [9.0,3.0,6.0]
+    '''
+
+    averages=[]
+
+    for item in list:
+        total=0
+        for mark in item:
+            total+=mark
+        averages.append(total/len(item))
+    return averages
     
