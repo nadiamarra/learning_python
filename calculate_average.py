@@ -14,8 +14,7 @@ def calculate_average(list):
     total=0
 
     for item in list:
-        total=total+item[1]
-
+        total+=item[1]
     return total/len(list)
     
     
