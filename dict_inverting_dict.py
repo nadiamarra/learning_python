@@ -21,8 +21,7 @@ for fruit in fruit_to_colour:       #we iterate over the keys
 
 #issue: more than one fruit for each colour
 
-#if colour is not already a key in the accumulator
-#add colour:[fruit] as an entry
+#if colour is not already a key in the accumulator, add colour:[fruit] as an entry
 
     if not(colour in colour_to_fruit):
         colour_to_fruit[colour]=[fruit]
