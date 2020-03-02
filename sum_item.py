@@ -15,3 +15,21 @@ def sum_items(list1, list2):
     for i in range(len(list1)):
         sum_list.append(list1[i] + list2[i])
     return sum_list
+
+
+def sum_even_numbers(num1, num2):
+    '''(num)-> num
+    
+    Return the sum of the even numbers.
+    
+    >>>sum_even_numbers(0,10)
+    20
+    '''
+    
+    total=0
+    for num in range(num1,num2):
+        if num%2==0:
+            total+=num
+    print(total)
+    
+    
