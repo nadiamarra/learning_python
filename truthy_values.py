@@ -9,5 +9,4 @@ def compact(lista):
     '''
 
 
-    truthy_list=[val for val in lista if bool(val) is True]
-    return truthy_list
+    return [val for val in lista if bool(val) is True]
