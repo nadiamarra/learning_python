@@ -9,7 +9,5 @@ def interleave(str1,str2):
     >>>interleave("lzr","iad")
     "lizard"
     '''
-    zipped_strings=list(zip(str1,str2))
-    joined_tuples=["".join(str) for str in zipped_strings]
-    return "".join(joined_tuples)
+    return "".join("".join(str) for str in zip(str1,str2))
 
