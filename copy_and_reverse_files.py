@@ -30,9 +30,7 @@ def copy_and_reverse(file_name, new_file_name): #inverts word order and letters
         text = file.read()
     with open(new_file_name, "w") as new_file:
         new_file.write(text[::-1])
-            
-                
-copy_and_reverse("story.txt","lines_reversed.txt")
+
 
 
 
