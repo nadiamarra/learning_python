@@ -70,3 +70,30 @@ def find_user(file_name,first_name,last_name):
         return f"{first_name} {last_name} not found"
 
 
+def update_users(file_name,old_first_name,old_last_name,new_first_name,new_last_name):
+
+    '''
+    Update user first and last name and return the count of how many users were updated.
+
+    >>> update_users("Grace", "Hopper", "Hello", "World")
+    Users updated: 1
+    >>> update_users("Colt", "Steele", "Boba", "Fett")
+    Users updated: 2
+    >>> update_users("Not", "Here", "Still not", "Here")
+    Users updated: 0
+    '''
+
+    with open("users.csv") as file:
+        csv_reader=reader(file)  
+        rows=list(csv_reader)  
+        
+    count=0
+    with open("users.csv","w") as file:
+        csv_writer=writer(file)
+        for row in rows:
+            if row[0] == old_first_name and row[1] == old_last_name:
+                csv_writer.writerow([new_first_name,new_last_name])
+                count+=1
+            else:
+               csv_writer.writerow(row)
+    return f"Users updated: {count}"
