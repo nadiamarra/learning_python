@@ -97,3 +97,33 @@ def update_users(file_name,old_first_name,old_last_name,new_first_name,new_last_
             else:
                csv_writer.writerow(row)
     return f"Users updated: {count}"
+
+
+def delete_users(file_name,first_name,last_name):
+
+    '''
+
+    Remove any user whose first and last name matches the input.
+    Return a count of how many users were removed.
+
+    >>> delete_users("Grace", "Hopper")
+    Users deleted: 1
+    >>> delete_users("Colt", "Steele")
+    Users deleted: 2
+    >>> delete_users("Not", "Here")
+    Users deleted: 0
+    '''
+   
+    with open(file_name) as file:
+        csv_reader=reader(file)
+        rows=list(csv_reader)
+
+    count=0
+    with open(file_name,"w") as file:
+        csv_writer=writer(file)
+        for row in rows:
+            if row[0]==first_name and row[1]==last_name:
+                count+=1
+            else:
+                csv_writer.writerow(row)
+    return f"Users deleted: {count}"
